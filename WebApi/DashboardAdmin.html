@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Administrative Manager</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <meta charset="utf-8" />
+
+   
+    <link href="Web/css/jquery-ui.css" rel="stylesheet" />
+    <link href="Web/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/select.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/editor.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="Web/css/toastr.min.css" rel="stylesheet" />
+    <link href="Web/css/clwCustom/clwStyles.css" rel="stylesheet" />
+
+
+
+    <script src="Web/js/jquery-1.11.3.min.js"></script>
+    <script src="Web/js/jquery-ui.min.js"></script>
+    <script src="Web/js/bootstrap.min.js"></script>
+    <script src="Web/js/jquery.dataTables.min.js"></script>
+    <script src="Web/js/dataTables.buttons.min.js"></script>
+    <script src="Web/js/dataTables.select.min.js"></script>
+    <script src="Web/js/buttons.print.min.js"></script>
+    <script src="Web/js/dataTables.editor.min.js"></script>
+    <script src="Web/js/moment.js"></script>
+    <script src="Web/js/toastr.min.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.global.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboardDataService.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboardContainers.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboard.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.loadscripts.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.locations.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.operators.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.radios.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.vehicles.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.userAdmin.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dailyRolloffRpt.js"></script>
+    <script src="Web/js/myClearwaterCustom/myCleawater.dashboardManager.js"></script>
+    <script src="Web/js/myClearwaterCustom/myCleawater.activeWork.js"></script>
+    <script type="text/javascript" language="javascript" class="init"></script>
+</head>
+<body>
+    <div class="AdminstrationAuthorized">
+        <div class="DahboardAdimContainerDiv container-fluid">
+            <div class="row">
+                <div class="col-sm-4" style="height: 140px; background: no-repeat; background-image: url('Web/images/ClearwaterLogo.png'); "></div>
+                <div class="col-sm-4" style="height: 140px;"> <div class="HeadingBackground">Administrative Manager</div></div>
+                <div class="col-sm-4" style="height: 140px">
+                    <div>
+                        <div class="NavButtons">
+                            <input type="button" value="Dashboard" onclick='location.href="dashboard.html"'>
+                            <input type="button" value="Route Manager" onclick='location.href ="dashboardManager.html" '>
+                            <input type="button" value="Container Inventory" onclick='location.href="dashboardContainerInventory.html"'>
+                            <input type="button" value="Help" onclick='location.href="help.html"'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="DahboardAdimContainerDiv container-fluid">
+                <table class="DashboradAdminTable">
+                    <tr>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="activeLocations" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Login Name</th>
+                                            <th>Create Date</th>
+                                            <th>Modify Date</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="activeOperators" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Vehicle</th>
+                                            <th>Call Sign</th>
+                                            <th>Login Name</th>
+                                            <th>Create Date</th>
+                                            <th>Modify Date</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="rolloffRpt" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Route Date</th>
+                                            <th>Dump Returns</th>
+                                            <th>Dump Remove</th>
+                                            <th>Dump Relocate</th>
+                                            <th>Deliveries</th>
+                                            <th>In-Kind</th>
+                                            <th>Trucks</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="activeWork" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Vehicle</th>
+                                            <th>Call Sign</th>
+                                            <th>Route Date</th>
+                                            <th>Stops</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="activeVehicles" style="border-style: solid; border-color:green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Vehicle</th>
+                                            <th>LoginName</th>
+                                            <th>CreateDate</th>
+                                            <th>ModifyDate</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="activeRadios" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Call Sign</th>
+                                            <th>LoginName</th>
+                                            <th>CreateDate</th>
+                                            <th>ModifyDate</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="DashboardContainerDiv">
+                                <table id="userAdmin" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>User Name</th>
+                                            <th>ID</th>
+                                            <th>Access</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<div class="DashboardContainerDiv">
+    <footer class="panel-footer text-center" style="font-size: 1em">
+        Developed by the City of Clearwater Department of Information Technology <br />
+        <span class="glyphicon glyphicon-copyright-mark copyright"></span>
+    </footer>
+</div>
+        <script type="text/javascript">
+            {
+
+                "use strict";
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.setupOperatorAdmin, "value": myClearwater.Administror });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.locations, "value": myClearwater.Administror });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.radios, "value": myClearwater.Administror });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.vehicles, "value": myClearwater.Administror });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.userAdmin, "value": myClearwater.Administror });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.activeWork, "value": myClearwater.Editor });
+                myClearwater.UIFunctions.push({ "loadMod": myClearwater.rollOffRpt, "value": myClearwater.Readonly });
+                myClearwater.accessLevel(myClearwater.UIFunctions)
+                myClearwater.setCopyrightDate();
+            }
+        </script>

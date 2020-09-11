@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A9B0AA8-E85D-4D85-8973-B5B22BCFE1F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApi</RootNamespace>
+    <AssemblyName>WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\..\..\Editor-NET-1.6.1\Editor-NET-1.6.1\DataTables\bin\Debug\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DataTables">
+      <HintPath>..\..\..\Editor-NET-1.6.1\Editor-NET-1.6.1\DataTables.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Editor-NET-1.6.1\Editor-NET-1.6.1\DataTables\bin\Debug\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RecordCasesWepApp\RecordCases\WebApi\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RecordCasesWepApp\RecordCases\WebApi\bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DashboardAdmin.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Dashboard.html" />
+    <Content Include="DashboardContainerInventory.html" />
+    <Content Include="Web\css\bootstrap.min.css" />
+    <Content Include="Web\css\buttons.dataTables.min.css" />
+    <Content Include="Web\css\clwCustom\clwStyles.css" />
+    <Content Include="DashboardManager.html" />
+    <Content Include="Web\css\jquery-ui.css" />
+    <Content Include="Web\css\jquery.dataTables.min.css" />
+    <Content Include="Web\css\toastr.min.css" />
+    <Content Include="Web\js\bootstrap.min.js" />
+    <Content Include="Web\js\dataTables.buttons.min.js" />
+    <Content Include="Web\js\dataTables.select.min.js" />
+    <Content Include="Web\js\jquery-1.11.3.min.js" />
+    <Content Include="Web\js\jquery-ui.min.js" />
+    <Content Include="Web\js\jquery.dataTables.min.js" />
+    <Content Include="Web\js\moment.js" />
+    <Content Include="Web\js\buttons.print.min.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.containerInventory.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.dashboard.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.dailyRolloffRpt.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.dashboardContainers.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.userAdmin.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.locations.js" />
+    <Content Include="Web\js\myClearwaterCustom\myCleawater.activeWork.js" />
+    <Content Include="Web\js\myClearwaterCustom\myCleawater.dashboardManager.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.dashboardDataService.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.global.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.operators.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.radios.js" />
+    <Content Include="Web\js\myClearwaterCustom\myClearwater.vehicles.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web\css\editor.dataTables.min.css" />
+    <Content Include="Web\images\ajax-loader--.gif" />
+    <Content Include="Web\images\ajax-loader-.gif" />
+    <Content Include="Web\images\ajax-loader-small-.gif" />
+    <Content Include="Web\images\ajax-loader-small.gif" />
+    <Content Include="Web\images\ajax-loader.gif" />
+    <Content Include="Web\images\calender.png" />
+    <Content Include="Web\images\close.png" />
+    <Content Include="Web\images\shadow_left.png" />
+    <Content Include="Web\images\shadow_right.png" />
+    <Content Include="Web\js\dataTables.editor.min.js" />
+    <Content Include="Web\css\select.dataTables.min.css" />
+    <Content Include="Web\js\toastr.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminControllers\UndoClearActiveRoutesController.cs" />
+    <Compile Include="Controllers\AdminControllers\DailyRolloffRptController.cs" />
+    <Compile Include="Controllers\UserAccessLevelController.cs" />
+    <Compile Include="Controllers\AdminControllers\UserAdminController.cs" />
+    <Compile Include="Controllers\UIErrorLogger.cs" />
+    <Compile Include="Controllers\DashboardTableHeadersController.cs" />
+    <Compile Include="Controllers\AdminControllers\ActiveRoutesController.cs" />
+    <Compile Include="Controllers\AdminControllers\LocationsController.cs" />
+    <Compile Include="Controllers\AdminControllers\OperatorsController.cs" />
+    <Compile Include="Controllers\AdminControllers\RadiosController.cs" />
+    <Compile Include="Controllers\ContainerInventoryController.cs" />
+    <Compile Include="Controllers\RedrawDashboardController.cs" />
+    <Compile Include="Controllers\DashboardManagerController.cs" />
+    <Compile Include="Controllers\AdminControllers\VehiclesController.cs" />
+    <Compile Include="Controllers\DashboardAssignedRoutesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LocationModel.cs" />
+    <Compile Include="Models\OperatorModel.cs" />
+    <Compile Include="Models\RadioModel.cs" />
+    <Compile Include="Models\DashboardManagerModel.cs" />
+    <Compile Include="Models\ActiveRouteVehiclesModel.cs" />
+    <Compile Include="Models\VehicleModel.cs" />
+    <Compile Include="Models\ContainerInventoryModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Common\" />
+    <Folder Include="Web\js\jsMisc\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49942</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63947/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:63947/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

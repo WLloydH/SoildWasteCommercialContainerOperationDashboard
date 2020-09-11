@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Manager</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+
+    <link href="Web/css/jquery-ui.css" rel="stylesheet" />
+    <link href="Web/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/select.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/editor.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />    
+    <link href="Web/css/toastr.min.css" rel="stylesheet" />
+    <link href="Web/css/clwCustom/clwStyles.css" rel="stylesheet" />
+    <style type="text/css">
+        .HeadingBackground {
+            text-align: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 48px;
+        }
+    </style>
+
+
+    <script src="Web/js/jquery-1.11.3.min.js"></script>
+    <script src="Web/js/jquery-ui.min.js"></script>
+    <script src="Web/js/jquery.dataTables.min.js"></script>
+    <script src="Web/js/dataTables.buttons.min.js"></script>
+    <script src="Web/js/dataTables.select.min.js"></script>
+    <script src="web/js/dataTables.editor.min.js"></script>
+    <script src="Web/js/bootstrap.min.js"></script>
+    <script src="Web/js/moment.js"></script>
+    <script src="Web/js/toastr.min.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.global.js"></script>
+    <script src="Web/js/myClearwaterCustom/myCleawater.dashboardManager.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboardDataService.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid" style="margin-left:10px;margin-right:10px;">
+        <div class="row">
+            <div class="col-lg-4" style="height: 140px; background: no-repeat; background-image: url('Web/images/ClearwaterLogo.png'); "></div>
+            <div class="col-lg-4" style="height: 140px;"><div class="HeadingBackground">Route Manager</div></div>
+            <div class="col-lg-4" style="height: 140px">
+                <div>
+                    <div class="NavButtons">
+                        <input type="button" value="Dashboard" onclick='location.href="dashboard.html"'>
+                        <input type="button" value="Dashboard Administration" onclick='location.href ="dashboardAdmin.html"'>
+                        <input type="button" value="Container Inventory" onclick='location.href ="DashboardContainerInventory.html"'>
+                        <input type="button" value="Help" onclick='location.href="help.html"'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="main-content">
+  
+            <div id="RouteManagerDiv">
+                <div style="float:right">Route&nbspDate From:&nbsp;&nbsp;<input type="search" id="minRouteDate" name="minRouteDate" title="Enter Route Date">&nbsp;&nbsp;To:&nbsp;&nbsp;<input type="search" id="maxRouteDate" name="maxRouteDate" title="Enter Route Date"></div>
+
+                 <table id="RouteManager" style="border-style: solid; border-color: green;" class="display" cellspacing="0">
+                    <thead>
+						<tr>
+							<th>Operator</th>
+							<th>Vehicle</th>
+							<th>Location</th>
+							<th>Location Address</th>
+							<th>Call Sign</th>
+							<th>Status</th>
+							<th>Type</th>
+							<th>Job Type</th>							
+							<th>Scheduled Route Date</th>
+							<th>Order</th>
+							<th>RouteUnique</th>
+							<th>Login Name</th>
+							<th>Create Date</th>
+							<th>Modify Date</th>
+							<th>Deleted</th>
+						</tr>
+                    </thead>
+                </table>
+        </div>
+    </div>
+</body>
+
+</html>
+<footer class="panel-footer text-center" style="font-size: 1em;  margin-left:10px;margin-right:10px;">
+    Developed by the City of Clearwater Department of Information Technology <br />
+    <span class="glyphicon glyphicon-copyright-mark copyright"></span>
+</footer>
+<script type="text/javascript"> 
+    myClearwater.UIFunctions.push({ "loadMod": myClearwater.setupDashboardManager, "value": myClearwater.Editor });
+    myClearwater.accessLevel(myClearwater.UIFunctions)
+    myClearwater.setCopyrightDate();
+</script>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Container Inventory</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link href="Web/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Web/css/editor.dataTables.min.css" rel="stylesheet" /> 
+    <link href="Web/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Web/css/toastr.min.css" rel="stylesheet" />
+    <link href="Web/css/clwCustom/clwStyles.css" rel="stylesheet" />
+
+    <script src="Web/js/jquery-1.11.3.min.js"></script>
+    <script src="Web/js/jquery.dataTables.min.js"></script>
+    <script src="Web/js/dataTables.editor.min.js"></script>
+    <script src="Web/js/bootstrap.min.js"></script>
+    <script src="Web/js/moment.js"></script>
+    <script src="Web/js/toastr.min.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.global.js"></script>  
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboardDataService.js"></script>
+
+    <style>
+        DTED DTED_Lightbox_Wrapper {
+            background-color: floralwhite;
+            opacity: 4;
+        }
+
+        div.DTED_Lightbox_Close {
+            display: none;
+        }
+
+        div.DTED_Lightbox_Background {
+            display: none;
+        }
+
+        DTED_Lightbox_Content_Wrapper {
+            background-color: floralwhite;
+        }
+    </style>
+    <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script type="text/javascript" language="javascript" src="web/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.0/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" language="javascript" src="web/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" language="javascript" src="web/js/dataTables.editor.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.global.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.containerInventory.js"></script>
+</head>   
+   
+<body>
+    <div class="DahboardContainerInventoryDiv container-fluid">
+        <div class="row">
+            <div class="col-lg-4" style="height: 140px; background: no-repeat; background-image: url('Web/images/ClearwaterLogo.png'); "></div>
+            <div class="col-lg-4" style="height: 140px;"> <div class="HeadingBackground">Container Inventory</div></div>
+            <div class="col-lg-4" style="height: 140px">
+                <div>
+                    <div style="vertical-align:middle; text-align:left;">
+                        <input type="button" value="Route Manager" onclick='location.href ="DashboardManager.html"'>
+                        <input type="button" value="Dashboard Administration" onclick='location.href ="DashboardAdmin.html"'>
+                        <input type="button" value="Help" onclick='location.href="help.html"'>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">   
+    myClearwater.UIFunctions.push({ "loadMod": myClearwater.containerInventory, "value": myClearwater.Editor });
+    myClearwater.accessLevel(myClearwater.UIFunctions)
+    myClearwater.setCopyrightDate();
+</script>

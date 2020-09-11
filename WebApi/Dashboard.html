@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Solid Waste Operation Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link href="Web/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Web/css/jquery.dataTables.min.css">
+    <link href="Web/css/toastr.min.css" rel="stylesheet" />
+    <link href="Web/css/clwCustom/clwStyles.css" rel="stylesheet" />
+
+
+    <script src="Web/js/jquery-1.11.3.min.js"></script>  
+    <script src="Web/js/jquery-ui.min.js"></script>
+    <script src="Web/js/jquery.dataTables.min.js"></script>
+    <script src="Web/js/moment.js"></script>
+    <script src="Web/js/toastr.min.js"></script>
+    <script src="Web/js/bootstrap.min.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.global.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboardContainers.js"></script>
+    <script src="Web/js/myClearwaterCustom/myClearwater.dashboard.js"></script>
+    <script type="text/javascript" language="javascript" class="init"></script>
+    <script type="text/javascript">
+        $(document).ready(function dashboardReady() {
+
+            myClearwater.UIFunctions.push({ "loadMod": myClearwater.dashboardContainers, "value": myClearwater.Readonly });
+            myClearwater.UIFunctions.push({ "loadMod": myClearwater.dashboard, "value": myClearwater.Readonly });
+            myClearwater.accessLevel(myClearwater.UIFunctions)
+            myClearwater.setCopyrightDate();
+        });
+    </script>
+</head>
+<body>
+    <div style="height: 140px; background: no-repeat; background-image: url('Web/images/ClearwaterLogo.png'); margin:auto;"></div>
+    <div id="ContainerInventory" align="center" class="display" cellspacing="0" width="50%">
+       
+        <div >
+        <table style="border-style: solid; border-width: 2px; border-color: green; width: 45%; align-content:center; font-size:x-large">
+            <tr>
+                Route Work Date:
+                <input type="text" id="routeDate">
+            </tr>
+        </table>
+        <div >
+            <table style="border-style: solid; border-width: 2px; border-color: green; width: 45%;">
+                <tr style="border-style: solid; border-color: green; font-size:larger">
+                    <td ID="billingCycle" align="left" width="40%"></td>
+                </tr>
+                <tr style="border-style: solid; border-width:1px; border-color: green; font-size:larger; ">
+                    <td align="left">Container Size:</td>
+                    <td id="C10" class="containerSize" align="right">10</td>
+                    <td id="C20" class="containerSize" align="right">20</td>
+                    <td id="C30" class="containerSize" align="right">30</td>
+                    <td id="C40" class="containerSize" align="right">40</td>
+                </tr>
+                <tr style="border-style: solid; border-color: green; font-size:larger; border-top:1px;">
+                    <td align="left">On Hand:</td>
+                    <td id="con10" align="right" />
+                    <td id="con20" align="right" />
+                    <td id="con30" align="right" />
+                    <td id="con40" align="right" />
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div >
+        <br />
+        <div id='AvailiableVehicles' align="center" class="display" cellspacing="0" width="75%">
+            <table id='SWOpDaskboard' style="border-style: solid; border-color: green;" class="table-bordered">
+                <tr id="SWOpDashboardtrHead" style="border-style: solid; border-color: green;"></tr>
+                <tr id="SWOpDashboardtrDT" class="row-border"></tr>
+            </table>
+        </div>
+    </div>
+        </div>
+</body>
+</html>
+<footer style="text-align:center">
+    <br />
+    Developed by the City of Clearwater Department of Information Technology <br />
+    <span class="copyright"></span>
+</footer>
+
